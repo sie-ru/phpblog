@@ -1,0 +1,16 @@
+{% extends "layout.twig" %}
+{% block content %}
+<div class="flex justify-center">
+	<div class="w-2/3 py-4 px-8 bg-white shadow-lg rounded-lg my-10">
+		<img class="w-50 h-50 object-cover border-1 border-indigo-500 mb-10" src="https://dummyimage.com/300x300/6b63ff/fff"/>
+		<div>
+			<h2 class="text-gray-800 text-3xl font-semibold">{{post.title|escape}}</h2>
+			<p class="mt-2 text-gray-600">{{post.content|raw}}</p>
+		</div>
+		<div>
+			<p class="mt-5 text-gray-400">{{post.published_date|date('F d, Y')}}</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
